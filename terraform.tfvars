@@ -1,2 +1,3 @@
-prefix   = "Varonis"
-location = "East US"
+prefix       = "varonis"
+location     = "East US"
+alt_location = "Central US"
