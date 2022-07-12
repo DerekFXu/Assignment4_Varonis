@@ -2,6 +2,7 @@ provider "azurerm" {
   features {}
 }
 
+#Creates new resource group for traffic manager
 resource "azurerm_resource_group" "example" {
   name     = "${var.prefix}-tmresources"
   location = var.location
@@ -24,6 +25,7 @@ resource "azurerm_traffic_manager_profile" "example" {
   }
 }
 
+#Here we use modules to deploy to two regions with unique names and the same code
 module "region1" {
   source   = "./modules/region"
   prefix   = "${var.prefix}-region1"
